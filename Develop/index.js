@@ -1,15 +1,16 @@
 // TODO: Include packages needed for this application
-
+const inquirer = require('inquirer');
+const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         message: 'What is the name of your project?',
-        name: 'project-title',
+        name: 'projectTitle',
     },
     {
         type: 'input',
-        message: 'Provide a short description explaining the what, why, and how of your project.What was your motivation? Why did you build this project? What problem does it solve? What did you learn?',
+        message: 'Provide a short description explaining the what, why, and how of your project. What was your motivation? Why did you build this project? What problem does it solve? What did you learn?',
         name: 'description',
     },
     {
@@ -54,58 +55,62 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((data) => {
+        const fileName = 'README.md';
 
-// Function call to initialize app
-init();
-
-
-`
-# ${data.project-title}
-
+        fs.writeFile(fileName, 
+             `
+# ${data.projectTitle}
+            
 ## Description
-
+            
 ${data.description}
-
+            
 ## Table of Contents
-
+            
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-
+            
 ## Installation
-
+            
 ${data.installation}
-
+            
 ## Usage
-
+            
 ${data.usage}
-
+            
 ## Credits
-
+            
 ${data.credits}
-
+            
 ## License
-
+            
 ${data.license}
-
+            
 ## Tests
-
+            
 ${data.tests}
-
+            
 ## Features
-
+            
 ${data.features}
-
+            
 ## Questions
-
+            
 If you have questions, please reach out at the following.
 [GitHub](https://github.com/${data.username})
 [Email](${data.email})
-
+            
 `
+            ,(err) => err ? console.log(err) : console.log('Success!'));
+    });
+};
+
+// Function call to initialize app
+init();
