@@ -16,7 +16,9 @@ The following is a video of the application. [Click here for link to video](http
 
 ![Video of application](/Develop/assets/Demo%20of%20README%20Generator.gif)
 
-(/Develop/assets/Demo%20of%20README%20Generator.webm)
+The following is a screenshot of the README created in the video
+
+![screenshot of README from video](/Develop/assets/Screenshot%202022-12-06%20203807.png)
 
 ## License
 
