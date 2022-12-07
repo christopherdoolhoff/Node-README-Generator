@@ -12,8 +12,11 @@ Inquirer is needed to run this README.md generator.
 
 A user can create a README.md by following the prompts and answering the questions about their application. 
 
-The following is a screenshot of the web application.
-![Screenshot of application](./assets/Screenshot%202022-11-10%20232458.png)
+The following is a video of the application. [Click here for link to video](https://drive.google.com/file/d/1rcQv92esTd8BJ-DnASeWCg721fGLzYMG/view)
+
+![Video of application](/Develop/assets/Demo%20of%20README%20Generator.gif)
+
+(/Develop/assets/Demo%20of%20README%20Generator.webm)
 
 ## License
 
